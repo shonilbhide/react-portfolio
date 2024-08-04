@@ -9,6 +9,9 @@ import About from './components/About';
 function App() {
   const location = useLocation();
   const url = window.location.href;
+  const pathname = window.location.pathname;
+  const protocol = window.location.protocol;
+  const hostname = window.location.hostname;
   console.log("LOCATION###",{location})
   // const { hash, pathname, search } = location;
   return (
@@ -16,7 +19,7 @@ function App() {
       <Routes>
         <Route path="/react-portfolio" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path = '/about' element={<About />} />
+          <Route path = '/react-portfolio/about' element={<About />} />
           {/* <Route path="about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/portfolio" element={<Portfolio />} />
@@ -24,6 +27,9 @@ function App() {
         </Route>
       </Routes>
     You are currently accessing <b>{url}</b><br />
+    Pathname: <b>{pathname}</b><br />
+    Protocol: <b>{protocol}</b><br />
+    Hostname: <b>{hostname}</b>
     </>
   )
 }
