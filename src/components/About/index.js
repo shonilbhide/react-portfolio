@@ -1,12 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import {
-  faAws,
   faGitAlt,
-  faJsSquare,
-  faLinux,
-  faMdb,
-  faPython,
-  faReact,
 } from '@fortawesome/free-brands-svg-icons'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
@@ -25,6 +19,7 @@ const About = () => {
 
   return (
     <>
+        console.log({setLetterClass})
       <div className="container about-page">
         <div className="text-zone">
           <h1>

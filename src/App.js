@@ -1,6 +1,5 @@
 
 import './App.scss';
-import { useRef } from 'react';
 import React from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Layout from './components/Layout'
