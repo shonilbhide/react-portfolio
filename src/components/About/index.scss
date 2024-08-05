@@ -10,11 +10,11 @@
   overflow: hidden;
 }
 
-.about-page .containere {
-  display: block;
-}
+
 
 .text-zone {
+  flex-direction: column;
+  width: 50%;
   padding-left: 5%;
 }
 

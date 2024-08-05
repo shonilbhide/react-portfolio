@@ -112,11 +112,19 @@
     }
   }
   
-.App{
-    display: flex;
-    justify-content: flex-start; /* or center, space-between, etc. */
-    gap: 10px; /* Optional: space between items */ 
-}
+  .App {
+    display: flex; /* Use flexbox to arrange Sidebar and page horizontally */
+  }
+  
+  .Sidebar {
+    width: 20%; /* Sidebar takes 20% of the width */
+  }
+  
+  .page {
+    width: 80%; /* The remaining content takes 80% of the width */
+    padding: 10px; /* Optional: Add some padding to the content */
+  }
+  
 
   @media screen and (max-width: 1200px) {
     .page {
