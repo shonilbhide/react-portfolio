@@ -1,7 +1,9 @@
 .page {
     width: 100%;
+    position: fixed;
     height: 100%;
-    position: absolute;
+    margin-left: 15%; /* The page content starts after the Sidebar */
+    flex: 1; /* Takes the remaining space */
   }
   
   .top-tags {
@@ -113,17 +115,23 @@
   }
   
   .App {
-    display: flex; /* Use flexbox to arrange Sidebar and page horizontally */
+    display: flex;
   }
   
+  /* Sidebar Styles */
   .Sidebar {
+    position: fixed; /* Fixes the Sidebar in place */
+    top: 0;
+    left: 0;
     width: 20%; /* Sidebar takes 20% of the width */
+    height: 100vh; /* Sidebar height covers the full viewport height */
+    background-color: #f0f0f0; /* Optional: for visual distinction */
+    overflow-y: auto; /* Allows scrolling if content exceeds the viewport height */
   }
   
-  .page {
-    width: 80%; /* The remaining content takes 80% of the width */
-    padding: 10px; /* Optional: Add some padding to the content */
-  }
+
+  
+  
   
 
   @media screen and (max-width: 1200px) {
