@@ -1,13 +1,16 @@
-.stage-cube-cont {
-  width: 50%;
-  height: 100%;
-  top: 0;
-  padding-top: 18%;
-  margin-left: 0;
-  position: absolute;
-  right: 0;
-  overflow: hidden;
+.container.about-page {
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap; 
 }
+
+.textspace,
+.stage-cube-cont {
+  box-sizing: border-box; /* Ensures padding doesn't affect the width */
+  display: flex; /* Enables centering of content */
+  justify-content: left; /* Centers content horizontally */
+}
+
 
 .cubespinner {
   animation-name: spincube;
@@ -16,9 +19,10 @@
   animation-duration: 12s;
   transform-style: preserve-3d;
   transform-origin: 100px 100px 0;
-  margin-left: calc(50% - 100px);
+  margin-left: calc(30% - 100px);
 
   div {
+    
     position: absolute;
     width: 200px;
     height: 200px;
@@ -92,5 +96,14 @@
   }
   83% {
     transform: rotateX(90deg);
+  }
+}
+
+
+@media (max-width: 768px) { /* Adjust the max-width based on when you want the layout to stack */
+  .textspace,
+  .stage-cube-cont {
+    flex: 1 1 100%; /* Each div takes up 100% of the width on smaller screens */
+    margin-bottom: 20px; /* Optional: add space between stacked elements */
   }
 }

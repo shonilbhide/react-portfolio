@@ -43,8 +43,47 @@ textarea {
   margin: auto;
   top: 0;
   bottom: 0;
-  width: 50px;
+  width: 30px;
   height: 50px;
   animation: fadeOut 1s 1s;
   animation-fill-mode: forwards;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+
+  // Media query for tablets
+  @media (max-width: 768px) {
+    width: 90%;
+    padding: 15px;
+  }
+
+  // Media query for mobile phones
+  @media (max-width: 480px) {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 1rem;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.sidebar {
+  @media (max-width: 480px) {
+    display: none;
+  }
 }
