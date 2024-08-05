@@ -1,7 +1,7 @@
 
 import './App.scss';
 import React from 'react';
-import { Route, Routes, useLocation } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './components/Home';
 import About from './components/About';
