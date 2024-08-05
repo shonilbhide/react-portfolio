@@ -4,9 +4,18 @@
   top: 0;
   padding-top: 18%;
   margin-left: 0;
+  display: flex;
   position: absolute;
   right: 0;
   overflow: hidden;
+}
+
+.about-page .containere {
+  display: block;
+}
+
+.text-zone {
+  padding-left: 5%;
 }
 
 .cubespinner {
@@ -16,9 +25,10 @@
   animation-duration: 12s;
   transform-style: preserve-3d;
   transform-origin: 100px 100px 0;
-  margin-left: calc(50% - 100px);
+  margin-left: calc(30% - 100px);
 
   div {
+    
     position: absolute;
     width: 200px;
     height: 200px;
