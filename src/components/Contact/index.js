@@ -11,7 +11,7 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault()
-
+    console.log({setLetterClass})
     emailjs
     .sendForm('service_zjjlqwk', 'template_rt4xu2g', form.current, {
         publicKey: 'U3zFXoMvOFz99zf_C',
