@@ -4,10 +4,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "npm run build",
+    "start": "npm start"
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.1",
