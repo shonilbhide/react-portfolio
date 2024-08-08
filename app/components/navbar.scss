@@ -1,0 +1,24 @@
+.nav-item {
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-icon {
+    margin-right: 8px;
+    color: white;
+    transition: opacity 0.3s ease;
+  }
+  
+  .nav-text {
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-item:hover .nav-icon {
+    opacity: 0;
+  }
+  
+  .nav-item:hover .nav-text {
+    color: #ff69b4; // Pink color
+  }

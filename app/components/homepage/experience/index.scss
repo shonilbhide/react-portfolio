@@ -1,0 +1,107 @@
+.cubespinner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: spincube;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 12s;
+  transform-style: preserve-3d;
+
+  div {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px 0px lightyellow;
+  }
+
+  .Whizible {
+    height: 100px;
+  }
+
+  .Deloitte {
+    height: 100px;
+  }
+
+  .CDAC {
+    height: 100px;
+  }
+
+  .face1 {
+    transform: translateZ(100px);
+  }
+  .face2 {
+    transform: rotatex(270deg) rotateY(90deg) translateZ(100px);
+  }
+  .face3 {
+    transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+  }
+  .face4 {
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+  }
+  .face5 {
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+  }
+  .face6 {
+    transform: rotateX(-90deg) translateZ(100px);
+  }
+}
+
+@keyframes spincube {
+  from,
+  to {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  16% {
+    transform: rotateY(0deg) rotateZ(0deg);
+  }
+  16% {
+    transform: rotateY(-90deg) rotateX(90deg);
+  }
+  33% {
+    transform: rotateY(-180deg) rotateZ(90deg);
+  }
+  50% {
+    transform: rotateY(-270deg) rotateX(90deg);
+  }
+  83% {
+    transform: rotateX(90deg) ;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.cube-section,
+.card-section {
+  width: 100%;
+}
+
+@media (max-width: 1023px) {
+  .cube-section,
+  .card-section {
+    margin-bottom: 2rem;
+  }
+}
+
+.cube-section {
+  width: 100%;
+  padding-top: 7rem;
+  padding-bottom: 9rem; 
+}
