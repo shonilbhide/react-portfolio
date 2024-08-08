@@ -3,4 +3,4 @@
   publish = ".next"
 
 [build.environment]
-  NEXT_PUBLIC_API_URL = "https://shonilbhide.netlify.app/"
+  NEXT_PUBLIC_API_URL = "https://shonilbhide.netlify.app"
