@@ -28,7 +28,9 @@ function Word({ children, ...props }) {
   });
   return (
     <Billboard {...props}>
-      <Text ref={ref} onPointerOver={over} onPointerOut={out} onClick={() => console.log('clicked')} {...fontProps} children={children} />
+      <Text ref={ref} onPointerOver={over} onPointerOut={out} onClick={() => console.log('clicked')}>
+        {children}
+      </Text>
     </Billboard>
   );
 }
@@ -44,7 +46,7 @@ function Cloud({ count = 4, radius = 20 }) {
       for (let j = 0; j < count; j++) temp.push([new THREE.Vector3().setFromSpherical(spherical.set(radius, phiSpan * i, thetaSpan * j)), generate()]);
     return temp;
   }, [count, radius]);
-  return words.map(([pos, word], index) => <Word key={index} position={pos} children={word} />);
+  return words.map(([pos, word], index) => <Word key={index} position={pos}>{word}</Word>);
 }
 
 function WordCloud() {
