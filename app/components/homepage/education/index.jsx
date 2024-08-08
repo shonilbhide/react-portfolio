@@ -1,24 +1,71 @@
-// @flow strict
-import Image from "next/image";
+"use client"; // Add this line at the top
 
+import React, { useEffect, useRef, useState, useMemo, Suspense } from 'react';
+import Image from "next/image";
+import { Canvas, useFrame } from '@react-three/fiber';
+import { Billboard, Text, TrackballControls } from '@react-three/drei';
+import { generate } from 'random-words';
 import { educations } from "@/utils/data/educations";
 import { BsPersonWorkspace } from "react-icons/bs";
-import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
-import lottieFile from '/public/lottie/study.json';
+import * as THREE from 'three';
+
+function Word({ children, ...props }) {
+  const color = new THREE.Color();
+  const fontProps = { font: '/Inter-Bold.woff', fontSize: 2.5, letterSpacing: -0.05, lineHeight: 1, 'material-toneMapped': false };
+  const ref = useRef();
+  const [hovered, setHovered] = useState(false);
+  const over = (e) => (e.stopPropagation(), setHovered(true));
+  const out = () => setHovered(false);
+  // Change the mouse cursor on hover
+  useEffect(() => {
+    if (hovered) document.body.style.cursor = 'pointer';
+    return () => (document.body.style.cursor = 'auto');
+  }, [hovered]);
+  // Tie component to the render-loop
+  useFrame(({ camera }) => {
+    ref.current.material.color.lerp(color.set(hovered ? '#fa2720' : 'white'), 0.1);
+  });
+  return (
+    <Billboard {...props}>
+      <Text ref={ref} onPointerOver={over} onPointerOut={out} onClick={() => console.log('clicked')} {...fontProps} children={children} />
+    </Billboard>
+  );
+}
+
+function Cloud({ count = 4, radius = 20 }) {
+  // Create a count x count random words with spherical distribution
+  const words = useMemo(() => {
+    const temp = [];
+    const spherical = new THREE.Spherical();
+    const phiSpan = Math.PI / (count + 1);
+    const thetaSpan = (Math.PI * 2) / count;
+    for (let i = 1; i < count + 1; i++)
+      for (let j = 0; j < count; j++) temp.push([new THREE.Vector3().setFromSpherical(spherical.set(radius, phiSpan * i, thetaSpan * j)), generate()]);
+    return temp;
+  }, [count, radius]);
+  return words.map(([pos, word], index) => <Word key={index} position={pos} children={word} />);
+}
+
+function WordCloud() {
+  return (
+    <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
+      <fog attach="fog" args={['#202025', 0, 80]} />
+      <Suspense fallback={null}>
+        <group rotation={[10, 10.5, 10]}>
+          <Cloud count={8} radius={20} />
+        </group>
+      </Suspense>
+      <TrackballControls />
+    </Canvas>
+  );
+}
 
 function Education() {
   return (
     <div id="education" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
-      <Image
-        src="/section.svg"
-        alt="Hero"
-        width={1572}
-        height={795}
-        className="absolute top-0 -z-10"
-      />
       <div className="flex justify-center -translate-y-[1px]">
-        <div className="w-3/4">
+        <div className="w-full">
           <div className="h-[1px] bg-gradient-to-r from-transparent via-violet-500 to-transparent  w-full" />
         </div>
       </div>
@@ -34,23 +81,23 @@ function Education() {
       </div>
 
       <div className="py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-          <div className="flex justify-center items-start">
+        <div className="w-full">
+          {/* <div className="flex justify-center items-start">
             <div className="w-3/4 h-3/4">
-              <AnimationLottie animationPath={lottieFile} />
+              <WordCloud />
             </div>
-          </div>
+          </div> */}
 
-          <div>
-            <div className="flex flex-col gap-6">
+          <div className='w-full'>
+            <div className="w-full justify-center flex flex-col gap-6">
               {
                 educations.map(education => (
                   <GlowCard key={education.id} identifier={`education-${education.id}`}>
-                    <div className="p-3 relative text-white">
+                    <div className="w-full justify-center p-3 relative text-white">
                       <Image
                         src="/blur-23.svg"
                         alt="Hero"
-                        width={1080}
+                        width={3080}
                         height={200}
                         className="absolute bottom-0 opacity-80"
                       />
@@ -63,7 +110,7 @@ function Education() {
                         <div className="text-violet-500  transition-all duration-300 hover:scale-125">
                           <BsPersonWorkspace size={36} />
                         </div>
-                        <div>
+                        <div className='justify-center'>
                           <p className="text-base sm:text-xl mb-2 font-medium uppercase">
                             {education.title}
                           </p>

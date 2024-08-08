@@ -1,0 +1,15 @@
+.skills-charts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #myCanvasContainer {
+    position: relative;
+  }
+  
+  #myCanvas {
+    border: 1px solid #fff;
+  }
+  

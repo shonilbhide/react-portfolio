@@ -1,0 +1,16 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tagcanvas/2.9/tagcanvas.min.js"></script>
+<script>
+  window.onload = function() {
+    try {
+      TagCanvas.Start('myCanvas', 'tags', {
+        textColour: '#ffffff',
+        outlineColour: '#ff00ff',
+        reverse: true,
+        depth: 0.8,
+        maxSpeed: 0.05
+      });
+    } catch(e) {
+      console.log('Canvas error: ', e);
+    }
+  };
+</script>

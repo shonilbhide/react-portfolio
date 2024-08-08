@@ -1,42 +1,51 @@
-// @flow strict
-
+import './index.scss'
 import { experiences } from "@/utils/data/experience";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
-import AnimationLottie from "../../helper/animation-lottie";
+import Deloitte from '../../../../public/assets/Deloitte.png'
+import Whizible from '../../../../public/assets/whizible.png'
+import CDAC from '../../../../public/assets/cdac.png'
 import GlowCard from "../../helper/glow-card";
-import experience from '/public/lottie/code.json';
 
 function Experience() {
   return (
-    <div id="experience" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
-      <Image
-        src="/section.svg"
-        alt="Hero"
-        width={1572}
-        height={795}
-        className="absolute top-0 -z-10"
-      />
-
+    <div id="experience" className="relative z-50 border-t border-b my-12 lg:my-24 border-[#25213b]">
       <div className="flex justify-center my-5 lg:py-8">
-        <div className="flex  items-center">
+        <div className="flex items-center">
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
           <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
-            Experiences
+            Experience
           </span>
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
         </div>
       </div>
 
-      <div className="py-8">
+      <div className="py-8 flex flex-col">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-          <div className="flex justify-center items-start">
-            <div className="w-full h-full">
-              <AnimationLottie animationPath={experience} />
+          <div className='cube-section justify-center w-full h-full flex items-center gap-x-12 px-12 py-12'>
+            <div className="cubespinner">
+              <div className="face1">
+                <Image className="Deloitte" src={Deloitte} alt='Deloitte' />
+              </div>
+              <div className="face2">
+                <Image className="Whizible" src={Whizible} alt='Whizible' />
+              </div>
+              <div className="face3">
+                <Image className="CDAC" src={CDAC} alt='cdac' />
+              </div>
+              <div className="face4">
+                <Image className="Deloitte" src={Deloitte} alt='Deloitte' />
+              </div>
+              <div className="face5">
+                <Image className="Whizible" src={Whizible} alt='Whizible' />
+              </div>
+              <div className="face6">
+                <Image className="CDAC" src={CDAC} alt='cdac' />
+              </div>
             </div>
           </div>
 
-          <div>
+          <div className='card-section' >
             <div className="flex flex-col gap-6">
               {
                 experiences.map(experience => (
@@ -55,7 +64,7 @@ function Experience() {
                         </p>
                       </div>
                       <div className="flex items-center gap-x-8 px-3 py-5">
-                        <div className="text-violet-500  transition-all duration-300 hover:scale-125">
+                        <div className="text-violet-500 transition-all duration-300 hover:scale-125">
                           <BsPersonWorkspace size={36} />
                         </div>
                         <div>
@@ -65,6 +74,11 @@ function Experience() {
                           <p className="text-sm sm:text-base">
                             {experience.company}
                           </p>
+                          <ul className="list-disc list-inside text-sm sm:text-base mt-2">
+                            {experience.description.map((desc, index) => (
+                              <li key={index}>{desc}</li>
+                            ))}
+                          </ul>
                         </div>
                       </div>
                     </div>

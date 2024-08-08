@@ -1,20 +1,34 @@
 export const educations = [
   {
     id: 1,
-    title: "Bachelor Degree",
-    duration: "2020 - Present",
-    institution: "National University of Bangladesh",
+    title: "Master of Computer Science",
+    duration: "August 2023 - May 2025",
+    institution: "North Carolina State University, Raleigh, NC",
+    gpa: "4/4",
+    coursework: [
+      "Machine Learning on Graphs",
+      "Neural Networks and Deep Learning",
+      "Software Engineering",
+      "Object Oriented Design and Development",
+      "Design and Analysis of Algorithms",
+      "Human-Computer Interaction"
+    ]
   },
   {
     id: 2,
-    title: "Higher Secondary Certificate",
-    duration: "2018 - 2020",
-    institution: "Noakhali Islamia Kamil Madrasah",
-  },
-  {
-    id: 3,
-    title: "Secondary School Certificate",
-    duration: "2008 - 2018",
-    institution: "Baitus Saif Islamia Madrasah",
+    title: "Bachelor of Technology in Computer Science",
+    duration: "June 2017 - July 2021",
+    institution: "Maharashtra Institute of Technology, Pune",
+    gpa: "9.97/10",
+    coursework: [
+      "Data Structures",
+      "Advanced Machine Learning Algorithms",
+      "Artificial Intelligence",
+      "Big Data Analytics",
+      "Data Warehousing and Data Mining",
+      "Design and Analysis of Algorithms",
+      "Cognitive Computing",
+      "Natural Language Processing"
+    ]
   }
-]
+];
