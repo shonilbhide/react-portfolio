@@ -128,7 +128,7 @@ export const Timeline = () => {
               patterns in client data to inform decision-making.
             </p>
             <p data-aos="fade-right">
-              Directed critical AWS Glue jobs for Vanguard's high-stakes DB
+              Directed critical AWS Glue jobs for Vanguard&apos;s high-stakes DB
               migration (20M daily trades) and configured key AWS resources like
               EC2, Aurora, DynamoDB, SNS, and CloudFront, maintaining
               professional validation and security measures.
@@ -180,7 +180,7 @@ export const Timeline = () => {
             <p data-aos="fade-right">
               Presented research findings at the 5th World Conference on Smart
               Trends in Systems, Security and Sustainability (WorldS4 2021) and
-              published in Springer's LNNS journal series.
+              published in Springer&apos;s LNNS journal series.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
