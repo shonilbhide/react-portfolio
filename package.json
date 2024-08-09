@@ -34,6 +34,7 @@
     "three": "^0.167.1"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^3.9.2",
     "autoprefixer": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",
