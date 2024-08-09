@@ -82,7 +82,7 @@ function HeroSection() {
     <span className="mr-2 text-yellow-400">&apos;NC State University&apos;</span>
     <br/>
     <span className="mr-2 text-white">self.graduation_date = </span>
-    <span className="mr-2 text-yellow-400">datetime(2025, 12, 12)</span>
+    <span className="mr-2 text-yellow-400">datetime(2025, 05, 05)</span>
     <br/>
     <span className="mr-2 text-white">self.skills = </span>
     <span className="mr-2 text-yellow-400">[&apos;Python&apos;, &apos;MySql&apos;, &apos;MongoDB&apos;, &apos;Docker&apos;, &apos;AWS&apos;, &apos;Ruby&apos;, &apos;JavaScript&apos;, &apos;PySpark&apos;, &apos;GCS&apos;, &apos;PowerBI&apos;, &apos;Tensorflow&apos;]</span>
