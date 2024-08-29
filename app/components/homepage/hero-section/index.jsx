@@ -87,9 +87,6 @@ function HeroSection() {
     <span className="mr-2 text-white">self.skills = </span>
     <span className="mr-2 text-yellow-400">[&apos;Python&apos;, &apos;MySql&apos;, &apos;MongoDB&apos;, &apos;Docker&apos;, &apos;AWS&apos;, &apos;Ruby&apos;, &apos;JavaScript&apos;, &apos;PySpark&apos;, &apos;GCS&apos;, &apos;PowerBI&apos;, &apos;Tensorflow&apos;]</span>
     <br/>
-    <span className="mr-2 text-white">self.hardworker = </span>
-    <span className="mr-2 text-yellow-400">True</span>
-    <br/>
     <span className="mr-2 text-white">self.quickLearner = </span>
     <span className="mr-2 text-yellow-400">True</span>
     <br/>

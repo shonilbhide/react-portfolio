@@ -1,6 +1,18 @@
 export const experiences = [
   {
     id: 1,
+    title: "Gen-AI Engineer Intern",
+    company: "Frobe AI",
+    duration: "(July 2024 - Present)",
+    description: [
+      "Engineered the architecture for an advanced AGI solution, addressing key issues faced by end users of OEM products, resulting in an average of 15% reduction in reported issues.",
+      "Enhanced the Mistral model's performance by reducing the toxicity to 0.21, leading to precise and reliable results for end users.",
+      "Designed and executed Retrieval-Augmented Generation (RAG) techniques for internal summarization and model training, achieving a relevance score of 0.87.",
+      "Integrated Redis (Vector Database) for optimized data retrieval and storage."
+    ]
+  },
+  {
+    id: 2,
     title: 'Analyst',
     company: "Deloitte Consulting",
     duration: "(Sep 2021 - July 2023)",
@@ -12,7 +24,7 @@ export const experiences = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     title: "Research AI/ML Intern",
     company: "Centre for Development of Advanced Computing, India (C-DAC)",
     duration: "(Jan 2021 - May 2021)",
@@ -23,7 +35,7 @@ export const experiences = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     title: "Software Development Intern",
     company: "Whizible",
     duration: "(March 2020 - June 2020)",
@@ -35,7 +47,7 @@ export const experiences = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     title: "Data Analytics Intern",
     company: "Pune Municipal Corporation",
     duration: "(June 2019 - July 2019)",
@@ -44,4 +56,5 @@ export const experiences = [
       "Crafted comprehensive visualizations and generated 7 insightful reports using Matplotlib, Tableau, and Power BI."
     ]
   }
+
 ];
