@@ -31,16 +31,16 @@ function Skills() {
 
       <div className="flex justify-center my-5 lg:py-8">
         <div className="flex items-center">
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-          <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-xl rounded-md">
+          <span className="w-24 h-[2px] bg-[#001a33]"></span>
+          <span className="bg-[#001a33] w-fit text-white p-2 px-5 text-xl rounded-md">
             Skills
           </span>
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+          <span className="w-24 h-[2px] bg-[#001a33]"></span>
         </div>
       </div>
 
       <div className="w-full my-12 flex items-center justify-center">
-        <button onClick={handlePrev} className="text-white bg-[#1a1443] p-4 rounded-md mx-2 text-2xl">
+        <button onClick={handlePrev} className="text-white bg-[#004080] p-4 rounded-md mx-2 text-2xl">
         &lt;
         </button>
         <Marquee
@@ -57,7 +57,7 @@ function Skills() {
               className="w-36 min-w-fit h-fit flex flex-col items-center justify-center transition-all duration-500 m-3 sm:m-5 rounded-lg group relative hover:scale-[1.15] cursor-pointer"
               key={id}
             >
-              <div className="h-full w-full rounded-lg border border-[#1f223c] bg-[#11152c] shadow-none shadow-gray-50 group-hover:border-violet-500 transition-all duration-500">
+              <div className="h-full w-full rounded-lg border border-[#1f223c] bg-[#001a33] shadow-none shadow-gray-50 group-hover:border-violet-500 transition-all duration-500">
                 <div className="flex -translate-y-[1px] justify-center">
                   <div className="w-3/4"></div>
                 </div>
@@ -77,7 +77,7 @@ function Skills() {
             </div>
           ))}
         </Marquee>
-        <button onClick={handleNext} className="text-white bg-[#1a1443] p-4 rounded-md mx-2 text-2xl">
+        <button onClick={handleNext} className="text-white bg-[#004080] p-4 rounded-md mx-2 text-2xl">
         &gt;
         </button>
       </div>

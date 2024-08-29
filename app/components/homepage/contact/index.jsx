@@ -12,12 +12,12 @@ function ContactSection() {
     <div id="contact" className="my-12 lg:my-16 relative mt-24 text-white">
 
       <div className="hidden lg:flex flex-col items-center absolute top-24 -right-8">
-      <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl opacity-20"></div>
+      <div className="w-[100px] h-[100px] bg-blue-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl opacity-20"></div>
 
-        <span className="bg-[#1a1443] w-fit text-white rotate-90 p-2 px-5 text-xl rounded-md">
+        <span className="bg-[#001a33] w-fit text-white rotate-90 p-2 px-5 text-xl rounded-md">
           CONTACT
         </span>
-        <span className="h-36 w-[2px] bg-[#1a1443]"></span>
+        <span className="h-36 w-[2px] bg-[#001a33]"></span>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         {
