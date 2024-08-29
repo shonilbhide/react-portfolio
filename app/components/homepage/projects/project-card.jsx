@@ -5,10 +5,10 @@ import * as React from 'react';
 function ProjectCard({ project }) {
 
   return (
-    <div className="from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37] w-full">
+    <div className="order-1 lg:order-2 from-[#000d1a] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#001a33]">
       <div className="flex flex-row">
-        <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
-        <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
+        <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-blue-500 to-blue-600"></div>
+        <div className="h-[1px] w-full bg-gradient-to-r from-blue-600 to-transparent"></div>
       </div>
       <div className="px-4 lg:px-8 py-3 lg:py-5 relative">
         <div className="flex flex-row space-x-1 lg:space-x-2 absolute top-1/2 -translate-y-1/2">
@@ -25,7 +25,7 @@ function ProjectCard({ project }) {
           <div className="blink">
             <span className="mr-2 text-pink-500">const</span>
             <span className="mr-2 text-white">project</span>
-            <span className="mr-2 text-pink-500">=</span>
+            <span className="mr-2 text-blue-500">=</span>
             <span className="text-gray-400">{'{'}</span>
           </div>
           <div>
@@ -64,6 +64,18 @@ function ProjectCard({ project }) {
           <div><span className="text-gray-400">{`};`}</span></div>
         </code>
       </div>
+      {project.link && (
+        <div className="flex justify-center py-4">
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-2 text-lg font-semibold text-white bg-gradient-to-r from-[#000d1a] to-[#000d1a] rounded-lg shadow-md hover:from-[#66b3ff] hover:to--[#66b3ff] transition-all duration-300"
+          >
+            View Project
+          </a>
+        </div>
+      )}
     </div>
   );
 };

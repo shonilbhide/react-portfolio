@@ -16,6 +16,11 @@ module.exports = {
         hostname: 'media.dev.to',
         pathname: '**',
       },
+      {
+        protocol: 'https',
+        hostname: 'drive.google.com',
+        pathname: '**',
+      },
     ],
   },
 }

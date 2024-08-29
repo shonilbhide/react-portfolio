@@ -1,4 +1,4 @@
-export const educations = [
+export const educationData = [
   {
     id: 1,
     title: "Master of Computer Science",
@@ -12,7 +12,8 @@ export const educations = [
       "Object Oriented Design and Development",
       "Design and Analysis of Algorithms",
       "Human-Computer Interaction"
-    ]
+    ],
+    image: "NCSU.png"
   },
   {
     id: 2,
@@ -29,6 +30,7 @@ export const educations = [
       "Design and Analysis of Algorithms",
       "Cognitive Computing",
       "Natural Language Processing"
-    ]
+    ],
+    image: "MIT.png"
   }
 ];
