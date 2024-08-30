@@ -20,7 +20,7 @@
   }
   
   .coursework-tile {
-    font-size: calc(1rem - 3px); /* Decrease font size by 2 */
+    font-size: calc(1rem - 2px); /* Decrease font size by 2 */
   }
   
   .coursework-container > *:nth-child(7) {
