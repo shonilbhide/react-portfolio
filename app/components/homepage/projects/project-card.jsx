@@ -74,8 +74,10 @@ function ProjectCard({ project }) {
           >
             View Project
           </a>
+          
         </div>
       )}
+
     </div>
   );
 };
