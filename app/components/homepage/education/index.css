@@ -13,3 +13,24 @@
     border: 1px solid #fff;
   }
   
+  .coursework-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+  }
+  
+  .coursework-tile {
+    font-size: calc(1rem - 3px); /* Decrease font size by 2 */
+  }
+  
+  .coursework-container > *:nth-child(7) {
+    margin-top: 1px; /* Add 1px space between the two rows */
+  }
+  
+  
+  @media (max-width: 640px) {
+    .coursework-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  

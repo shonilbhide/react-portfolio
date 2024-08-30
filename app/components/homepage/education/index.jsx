@@ -1,9 +1,10 @@
 "use client"; // Add this line at the top
 
-import React, { useEffect, useRef, useState, useMemo, Suspense } from 'react';
+import React from 'react';
 import Image from "next/image";
 import GlowCard from "../../helper/glow-card";
 import { educationData } from '@/utils/data/educations';
+import './index.css'; // Import the CSS file
 
 function Education() {
   return (
@@ -52,13 +53,18 @@ function Education() {
                           {education.title}
                         </p>
                         <p className="text-sm sm:text-base">{education.institution}</p>
-                        <p className="text-sm sm:text-base">GPA: {education.gpa}</p>
+                        <p className="text-sm sm:text-base text-[#ffcc00]">GPA: {education.gpa}</p>
                         <p className="text-sm sm:text-base">Coursework:</p>
-                        <ul className="list-disc list-inside">
+                        <div className="coursework-container">
                           {education.coursework.map((course, index) => (
-                            <li key={index} className="text-sm sm:text-base">{course}</li>
+                            <div
+                              key={index}
+                              className="coursework-tile p-1 bg-[#001a33] text-white rounded-md transition-all duration-300 hover:bg-white hover:text-[#001a33]"
+                            >
+                              - {course}
+                            </div>
                           ))}
-                        </ul>
+                        </div>
                       </div>
                     </div>
                   </div>

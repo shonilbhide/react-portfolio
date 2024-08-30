@@ -11,7 +11,9 @@ export const educationData = [
       "Software Engineering",
       "Object Oriented Design and Development",
       "Design and Analysis of Algorithms",
-      "Human-Computer Interaction"
+      "Human-Computer Interaction",
+      "Automated Learning and Data Analysis",
+      "Computer Networks"
     ],
     image: "NCSU.png"
   },
