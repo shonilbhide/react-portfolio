@@ -1,15 +1,13 @@
+
+
 import Link from "next/link";
 import Image from "next/image";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { RiContactsFill, RiStackFill } from "react-icons/ri";
 import { MdDownload } from "react-icons/md";
-import { personalData, timelineElements } from "../components/constants"; 
-import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
-import { FaGraduationCap, FaBriefcase } from "react-icons/fa";
-import "react-vertical-timeline-component/style.min.css";
+import { personalData } from "../components/constants"; 
 import Timeline from "../components/Timeline";
-
-
+import Skills from "../components/skills";
 
 export default function Home() {
   return (
@@ -76,7 +74,7 @@ export default function Home() {
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20 max-w-6xl mx-auto">
             
             {/* Left: Text Content */}
-            <div className="text-gray-300 md:w-2/3">
+            <div className="text-gray-300 md:w-3/5">
             <p className="leading-relaxed text-lg">
                 Ever since I wrote my first <span className="text-indigo-400 font-semibold">"Hello World"</span> program, 
                 I've been captivated by the power of technology to create meaningful solutions. 
@@ -96,7 +94,7 @@ export default function Home() {
             </div>
 
             {/* Right: Image Grid */}
-            <div className="grid grid-cols-2 gap-4 md:w-1/3">
+            <div className="grid grid-cols-2 gap-4 md:w-2/5">
             <Image src="/hike.jpg" width={200} height={150} alt="Hiking" className="rounded-lg shadow-lg" />
             <Image src="/hike.jpg" width={200} height={150} alt="Kalimba" className="rounded-lg shadow-lg" />
             <Image src="/hike.jpg" width={200} height={150} alt="Doodling" className="rounded-lg shadow-lg" />
@@ -108,8 +106,7 @@ export default function Home() {
 
         {/* Timeline Section */}
         <Timeline />
-      
-
+        <Skills />
 
       {/* Contact Section */}
       <div id="contact" className="mt-16">
