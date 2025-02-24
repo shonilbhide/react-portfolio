@@ -75,7 +75,7 @@ export default function Timeline() {
           <VerticalTimelineElement
             key={element.id}
             date={element.date}
-            icon={element.icon}
+            icon={[element.icon]}
             iconStyle={{ background: "#4A90E2", color: "#fff" }} // Customize icon style
             contentStyle={{
               background: "#1E293B", 

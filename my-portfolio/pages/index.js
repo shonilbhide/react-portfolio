@@ -7,7 +7,7 @@ import { RiContactsFill, RiStackFill } from "react-icons/ri";
 import { MdDownload } from "react-icons/md";
 import { personalData } from "../components/constants"; 
 import Timeline from "../components/Timeline";
-import Skills from "../components/skills";
+
 
 export default function Home() {
   return (
@@ -106,7 +106,6 @@ export default function Home() {
 
         {/* Timeline Section */}
         <Timeline />
-        <Skills />
 
       {/* Contact Section */}
       <div id="contact" className="mt-16">
