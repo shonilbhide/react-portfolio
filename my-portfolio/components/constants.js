@@ -21,7 +21,7 @@ export const Projects = [
 export const personalData = {
   github: "https://github.com/shonilbhide",
   linkedIn: "https://linkedin.com/in/shonilbhide",
-  resume: "/Shonil_Bhide_Resume.pdf", // Ensure the file is inside the public/ folder
+  resume: "https://drive.google.com/file/d/1Olf-WgoN9yLZc5FApLGR6KwpqY6XCq8_/view?usp=sharing", // Ensure the file is inside the public/ folder
 };
 
 

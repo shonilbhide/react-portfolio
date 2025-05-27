@@ -63,7 +63,7 @@ export default function Home() {
           </Link>
 
           {/* View My Work Button */}
-          <Link href="/projects" className="bg-gradient-to-r from-indigo-500 to-indigo-700 p-[1px] rounded-full transition-all duration-300 hover:from-indigo-600 hover:to-[#374151]">
+          <Link href="#projects" className="bg-gradient-to-r from-indigo-500 to-indigo-700 p-[1px] rounded-full transition-all duration-300 hover:from-indigo-600 hover:to-[#374151]">
             <button className="px-6 py-3 bg-[#0D1224] rounded-full text-white text-sm font-medium uppercase tracking-wider flex items-center gap-2 hover:gap-4 transition-all duration-200 ease-out">
               <span>View My Work</span>
               <RiStackFill size={20} />
@@ -123,7 +123,7 @@ export default function Home() {
       </div>
 
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-white text-center mb-12">
+        <h2 id="projects" className="text-3xl font-bold text-white text-center mb-12">
           Featured Projects
         </h2>
         <Projects />
