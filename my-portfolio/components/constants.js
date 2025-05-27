@@ -1,4 +1,3 @@
-import { FaGraduationCap, FaBriefcase } from 'react-icons/fa';
 
 export const Projects = [
     {

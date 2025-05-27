@@ -39,7 +39,7 @@ export default function Home() {
           Software Developer | Data Engineer | AI Enthusiast
         </p>
         <p className="mt-2 text-gray-400 text-center">
-          Master's in Computer Science, North Carolina State University
+          Master&apos;s in Computer Science, North Carolina State University
         </p>
 
         {/* Social Media Links */}
@@ -87,8 +87,8 @@ export default function Home() {
             {/* Left: Text Content */}
             <div className="text-gray-300 md:w-3/5">
             <p className="leading-relaxed text-lg">
-                Ever since I wrote my first <span className="text-indigo-400 font-semibold">"Hello World"</span> program, 
-                I've been captivated by the power of technology to create meaningful solutions. 
+                Ever since I wrote my first <span className="text-indigo-400 font-semibold">&quot;Hello World&quot;</span> program, 
+                I&apos;ve been captivated by the power of technology to create meaningful solutions. 
                 As a <span className="text-indigo-400 font-semibold">Software Developer & Data Engineer</span>, 
                 I thrive on building AI-driven applications that 
                 <span className="text-indigo-400 font-semibold"> blend innovation with real-world impact</span>. 
@@ -96,8 +96,8 @@ export default function Home() {
             </p>
 
             <p className="leading-relaxed text-lg mt-6">
-                But beyond code, I'm an <span className="text-indigo-400 font-semibold">extrovert who loves the outdoors</span>. 
-                You'll often find me on <span className="text-indigo-400 font-semibold">hiking trails</span>, 
+                But beyond code, I&apos;m an <span className="text-indigo-400 font-semibold">extrovert who loves the outdoors</span>. 
+                You&apos;ll often find me on <span className="text-indigo-400 font-semibold">hiking trails</span>, 
                 capturing breathtaking landscapes, or playing the <span className="text-indigo-400 font-semibold">Kalimba</span>, 
                 a soothing African musical instrument. Creativity fuels my passion, and I express it through 
                 <span className="text-indigo-400 font-semibold"> doodling and art</span>.
@@ -145,6 +145,17 @@ export default function Home() {
               Send Message
             </button>
           </form>
+        </div>
+        <div className="text-center mt-16 mb-8">
+          <p className="text-gray-400 text-lg">
+            Contact me:{" "}
+            <a
+              href="mailto:shonilsbhide@gmail.com"
+              className="text-blue-400 hover:underline"
+            >
+              shonilsbhide@gmail.com
+            </a>
+          </p>
         </div>
       </div>
 

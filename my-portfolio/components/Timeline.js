@@ -2,8 +2,7 @@
 
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { FaUniversity, FaLaptopCode, FaProjectDiagram, FaTools, FaIndustry } from "react-icons/fa";
-import { SiRedis, SiGooglecloud, SiPytorch } from "react-icons/si";
+import { FaUniversity, FaLaptopCode, FaProjectDiagram, FaIndustry } from "react-icons/fa";
 
 export default function Timeline() {
   const timelineElements = [
