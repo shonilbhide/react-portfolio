@@ -6,8 +6,19 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { RiContactsFill, RiStackFill } from "react-icons/ri";
 import { MdDownload } from "react-icons/md";
 import { personalData } from "../components/constants"; 
-import Timeline from "../components/Timeline";
+import dynamic from 'next/dynamic';
 
+
+// Import Timeline with SSR disabled
+const Timeline = dynamic(() => import("../components/Timeline"), {
+  ssr: false,
+  loading: () => <div className="text-center text-gray-400">Loading timeline...</div>
+});
+
+const Projects = dynamic(() => import("../components/Projects"), {
+  ssr: false,
+  loading: () => <div className="text-center text-gray-400">Loading projects...</div>
+});
 
 export default function Home() {
   return (
@@ -95,17 +106,28 @@ export default function Home() {
 
             {/* Right: Image Grid */}
             <div className="grid grid-cols-2 gap-4 md:w-2/5">
-            <Image src="/hike.jpg" width={200} height={150} alt="Hiking" className="rounded-lg shadow-lg" />
-            <Image src="/hike.jpg" width={200} height={150} alt="Kalimba" className="rounded-lg shadow-lg" />
-            <Image src="/hike.jpg" width={200} height={150} alt="Doodling" className="rounded-lg shadow-lg" />
-            <Image src="/hike.jpg" width={200} height={150} alt="Coding Passion" className="rounded-lg shadow-lg" />
+            <Image src="/kalimba.jpg" width={200} height={150} alt="Kalimba" className="rounded-lg shadow-lg" />
+            <Image src="/rsgrp2.jpg" width={200} height={150} alt="Research Group" className="rounded-lg shadow-lg" />
+            <Image src="/grad.jpg" width={200} height={150} alt="graduation" className="rounded-lg shadow-lg" />
+            <Image src="/hackathon.jpg" width={200} height={150} alt="Hackathon" className="rounded-lg shadow-lg" />
             </div>
         </div>
         </div>
 
 
         {/* Timeline Section */}
+       <div className="mb-16">
+        <h2 className="text-3xl font-bold text-white text-center mb-12">
+        </h2>
         <Timeline />
+      </div>
+
+      <div className="mb-16">
+        <h2 className="text-3xl font-bold text-white text-center mb-12">
+          Featured Projects
+        </h2>
+        <Projects />
+      </div>
 
       {/* Contact Section */}
       <div id="contact" className="mt-16">

@@ -1,18 +1,16 @@
 export default function About() {
-    return (
-      <div className="p-10">
-        <h1 className="text-3xl font-bold">About Me</h1>
-        <p className="mt-4">
-          I'm a passionate **Software Developer & Data Engineer** with a strong background in AI, Machine Learning, and Cloud Technologies. 
-          With hands-on experience in **ETL pipelines, Generative AI, NLP, and Distributed Systems**, I thrive on solving complex challenges in data engineering and software development.
-        </p>
-        <p className="mt-4">
-          Currently, I am pursuing my **Master's in Computer Science at North Carolina State University**, with a focus on **Machine Learning, AI, and Big Data Engineering**.
-        </p>
-        <p className="mt-4">
-          I have worked at **Deloitte Consulting** and **Frobe AI**, where I built scalable data pipelines, optimized AI models, and developed cloud-based software solutions.
-        </p>
-      </div>
-    );
-  }
-  
+  return (
+    <div>
+      <h1>About Me</h1>
+      <p>
+        I'm a passionate <strong>Software Developer & Data Engineer</strong> with a strong background in AI, Machine Learning, and Cloud Technologies. With hands-on experience in <strong>ETL pipelines, Generative AI, NLP, and Distributed Systems</strong>, I thrive on solving complex challenges in data engineering and software development.
+      </p>
+      <p>
+        Currently, I am pursuing my <strong>Master's in Computer Science at North Carolina State University</strong>, with a focus on <strong>Machine Learning, AI, and Big Data Engineering</strong>.
+      </p>
+      <p>
+        I have worked at <strong>Deloitte Consulting</strong> and <strong>Frobe AI</strong>, where I built scalable data pipelines, optimized AI models, and developed cloud-based software solutions.
+      </p>
+    </div>
+  );
+}
