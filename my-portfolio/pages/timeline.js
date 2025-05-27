@@ -83,7 +83,7 @@ const Timeline = () => {
             <div className="flex items-center gap-4 mb-2">
               <span className="text-blue-400 text-sm font-medium">{item.date}</span>
             </div>
-            
+            <span className="timeline-index">Step {index + 1}</span>
             <h3 className="text-white text-xl font-bold mb-1">{item.title}</h3>
             {item.company && (
               <p className="text-gray-300 text-sm mb-3">{item.company}</p>
